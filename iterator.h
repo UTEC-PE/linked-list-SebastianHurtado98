@@ -13,13 +13,25 @@ private:
     Node<T>* current;
 
 public:
-    Iterator();
-    Iterator(Node<T>* node);
+    Iterator(){
+        current= nullptr;
+    };
+    Iterator(Node<T>* node){
+        current= node;
+    };
 
-    Iterator<T> operator=(Iterator<T> node);
-    bool operator!=(Iterator<T> cmp);
-    Iterator<T> operator++();
-    T operator*();
+    Iterator<T> operator=(Iterator<T> node){
+        current= node.current;
+    };
+    bool operator!=(Iterator<T> cmp){
+        return current!=cmp.current;
+    };
+    Iterator<T> operator++(){
+        current=current->next;
+    };
+    T operator*(){
+        return current->data;
+    };
 };
 
 #endif //LINKEDLIST_ITERATOR_H

@@ -185,10 +185,16 @@ public:
         nodes=0;
     };
 
-    /*Iterator<T> begin();
-    Iterator<T> end();
+    Iterator<T> begin(){
+        Iterator<T> begin(head);
+        return begin;
+    };
+    Iterator<T> end(){
+        Iterator<T> end(tail);
+        return end;
+    };
 
-    ~List();*/
+    //~List();
 
 
 };
