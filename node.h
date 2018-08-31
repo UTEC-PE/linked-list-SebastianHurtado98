@@ -10,7 +10,7 @@ struct Node {
     T data;
     struct Node* next;
 
-    void killSelf();
+    void killSelf(); // No se implementó
 };
 
 

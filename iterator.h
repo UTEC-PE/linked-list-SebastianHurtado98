@@ -20,14 +20,14 @@ public:
         current= node;
     };
 
-    Iterator<T> operator=(Iterator<T> node){
+    Iterator<T> operator=(Iterator<T> node){ // Falta retornar el iterator, osea *this
         current= node.current;
     };
     bool operator!=(Iterator<T> cmp){
         return current!=cmp.current;
     };
     Iterator<T> operator++(){
-        current=current->next;
+        current=current->next; // Falta retornar el iterator
     };
     T operator*(){
         return current->data;

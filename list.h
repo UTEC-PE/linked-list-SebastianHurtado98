@@ -22,7 +22,7 @@ private:
     {
         if(head) {
             print_reverse(head->next);
-            cout << head->data << endl;
+            cout << head->data << endl; 
         }
     };
 
@@ -124,7 +124,7 @@ public:
     T get(int position){
         if(position>=nodes)
         {
-            cout << "Posicion no existe";
+            cout << "Posicion no existe"; // Siempre debes retornar algo, esto debería ser una excepción
         }
         else{
             auto n= head;
@@ -136,7 +136,7 @@ public:
     };
 
     void concat(List<T> &other){
-        if(!empty() && !other.empty()){
+        if(!empty() && !other.empty()){ // Si una de las listas es vacía, entonces el concat debería retornarte la otra
         tail->next= other.head;
         tail= other.tail;
         nodes=nodes+other.nodes;
@@ -194,7 +194,7 @@ public:
         return end;
     };
 
-    //~List();
+    //~List(); // Implementar el destructor es importante, nos permite liberar la memoria de nuestra lista
 
 
 };
